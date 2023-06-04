@@ -1,5 +1,6 @@
 const { Schema, model } = require("mongoose")
 const { brandImagePath } = require("../secret")
+const User = require("./userModel")
 
 
 const brandSchema = new Schema({
@@ -17,6 +18,11 @@ const brandSchema = new Schema({
     },
     brandSlug: {
         type: String
+    },
+    createdBy:{
+        type: Schema.Types.ObjectId,
+        ref: User
+
     }
 }, {timeseries: true})
 
