@@ -1,0 +1,5 @@
+1. Make Model Schema. User + Brand reference.
+2. Brand model has reference of user in it.
+3. Contact Schema
+4. CRUD Operation
+5. 
