@@ -14,7 +14,7 @@ const userSchema = new Schema({
         maxLength: [33, "Username must be under 33 characters"]
 
     },
-    EMAIL: {
+    email: {
         type: String,
         unique: true,
 
@@ -36,7 +36,7 @@ const userSchema = new Schema({
         set: (v) => bcrypt.hashSync(v, bcrypt.genSaltSync(10))
 
     },
-    Image: {
+    image: {
         type: String,
         default: defaultImagePath
 
@@ -49,7 +49,7 @@ const userSchema = new Schema({
 },
     { timeseries: true })
 
-const User = model(Users, userSchema)
+const User = model("users", userSchema)
 
 
 

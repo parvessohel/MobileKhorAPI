@@ -29,5 +29,5 @@ const contactSchema = new Schema({
 
 }, { timestamp: true })
 
-const contactModel = model(contactmodels, contactSchema)
+const contactModel = model("contactmodels", contactSchema)
 module.exports = contactModel

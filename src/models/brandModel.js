@@ -26,7 +26,7 @@ const brandSchema = new Schema({
     }
 }, {timeseries: true})
 
-const Brand = model(brands, brandSchema)
+const Brand = model("brands", brandSchema)
 
 module.exports = Brand
 

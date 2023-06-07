@@ -1,6 +1,8 @@
 const app = require("./app")
-const port = require("./secret")
+const { port } = require("./secret")
 const connectDB = require("./config/db")
+
+
 
 
 
