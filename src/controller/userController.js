@@ -1,15 +1,11 @@
 require('events').EventEmitter.defaultMaxListeners = 15; // Increase the limit as needed
-
-const router = require("express").Router()
-const User = require("../models/userModel")
-
-
 const CryptoJs = require("crypto-js")
-
+const User = require("../models/userModel")
+require("dotenv")
 
 const userRegister = async (req, res) => {
 
-
+    try {
         const newUser = new User({
             userName: req.body.userName,
             email: req.body.email,
@@ -17,7 +13,7 @@ const userRegister = async (req, res) => {
             image: req.body.image,
             
         })
-        try {
+        
             const savedUser = await newUser.save()
             res.status(201).json(savedUser)
         } catch (err) {

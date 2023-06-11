@@ -12,7 +12,7 @@ app.use(express.json())
 app.use("/users", userRouter)
 app.use("/brands", brandRouter)
 app.use("/mobileModels", mobileModelRouter)
-app.use("/contacts", contactRouter);
+app.use("/contacts", contactRouter)
 
 app.get("/", (req, res) => {
     res.send("Hi hello")

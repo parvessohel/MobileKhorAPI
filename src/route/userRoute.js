@@ -1,10 +1,6 @@
 const router = require("express").Router()
-const userRegister = require("../controller/userController")
-const userLogin = require("../controller/userController")
-const userUpdate = require("../controller/userController")
-const userDelete = require("../controller/userController")
-const getAlluser = require("../controller/userController")
-const getUser = require("../controller/userController")
+const { userRegister, userLogin, userUpdate, userDelete, getAlluser, getUser}  = require("../controller/userController")
+
 const User = require("../models/userModel")
 
 
